@@ -1,0 +1,138 @@
+/* The previous comments with css are mistakes, Fell free to use any of this code if you need to */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+*{
+    font-family: 'Outfit', monospace;
+}
+:root{
+    --background: hsl(217, 54%, 11%);
+    --card-color: hsl(216, 50%, 16%);
+    --blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --inner-card: 18rem;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+    min-height: 100svh;
+}
+.card{
+    min-height: 32rem;
+    min-width: 22rem;
+    border-radius: 1rem;
+
+    background-color: var(--card-color);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0rem;
+}
+.container{
+    width: 18rem;
+    height: 18rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: relative; */
+}
+#main{
+    width: var(--inner-card);
+    height: var(--inner-card);
+    border-radius: .75rem;
+    /* background-size: contain; */
+    /* z-index: 1; */
+    position: relative;
+}
+/* #main:hover{
+    cursor: pointer;
+    background-color: rgba(0, 255, 247, .3);
+    background-image: url(assets/icon-view.svg);
+    z-index: 10;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50px;
+}  */
+/* .view{
+    position: absolute;
+    align-items: center;
+    z-index: 0;
+} */
+.img1{
+    /* This contains the image for the background, not sure why I couldnt use the img tag in html */
+    min-width: var(--inner-card);
+    min-height: var(--inner-card);
+    background-image: url(assets/image-equilibrium.jpg);
+    background-size: cover;
+    border-radius: 10px;
+    z-index: 1;
+}
+.img2{
+    /* This contains the icon for the hover set to a z-index behind the main image */
+    min-width: var(--inner-card);
+    min-height: var(--inner-card);
+    background-image: url(assets/icon-view.svg);
+    /* The background color is optional in this step not an error */
+    /* background-color: rgba(0, 255, 247, 0.3); */
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 0;
+}
+.container:hover .img2{
+    /* changes the z-index to bring the icon to the front and adds the background hue */
+    z-index: 100;
+    /* border-radius: 0.75rem; */
+    cursor: pointer;
+    background-color: rgba(0, 255, 247, .3);
+
+}
+/* .container:hover{
+    z-index: 99;
+    background-color: rgba(0, 255, 247, .3);
+} */
+p{
+    width: var(--inner-card);
+    text-wrap: wrap;
+    color: var(--blue);
+}
+#title{
+    color: white;
+}
+.content *{
+    display: inline;
+}
+.content #timer{
+    padding-left: 8rem;
+}
+#ethereum{
+    color: var(--cyan);
+}
+hr{
+    height: 1px;
+    width: 100%;
+    border-color: hsl(215, 32%, 27%);
+}
+#author *{
+    display: inline;
+}
+#author img{
+    border: solid white 1px;
+    border-radius: 100px;
+    /* position: relative; */
+    align-items: center;
+}
+#author p{
+    position: relative;
+    bottom: 1rem;
+    left: 1rem;
+    align-items: center;
+}
+span{
+    color: white;
+}
+span:hover{
+    cursor: pointer;
+    color: var(--cyan);
+}
